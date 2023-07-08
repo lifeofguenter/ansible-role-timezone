@@ -22,9 +22,6 @@ jobs:
 
       - checkout
 
-      # dependencies
-      - run: ansible-galaxy collection install community.general
-
       - run: printf '[defaults]\nroles_path=../' > ansible.cfg
       - run: ansible-lint
 
